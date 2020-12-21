@@ -4,31 +4,41 @@ import random
 # List for computer to choose from
 rps = ['rock', 'paper', 'scissors']
 
+# Displaying the results
+def lose(computer):
+    print(f'\nI picked {computer}, you lose!')
+
+def win(computer):
+    print(f'\nI picked {computer}, you win!')
+
+def tie(computer):
+    print(f'\nI pick {computer} as well, it\'s a tie!')
+
 # Main game play
 def game():
     player = input('R_ock - P_aper - S_cissors? or Q_uit: ')
     computer = random.choice(rps)
     if player.lower() == 'r':
         if computer == 'paper':
-            print(f'\nI picked {computer} you lose!')
+            lose(computer)
         elif computer == 'scissors':
-            print(f'\nI picked {computer} you win!')
+            win(computer)
         else:
-            print(f'\nI picked {computer} as well, it\'s a tie!')
+            tie(computer)
     elif player.lower() == 'p':
         if computer == 'scissors':
-            print(f'\nI picked {computer} you lose!')
+            lose(computer)
         elif computer == 'rock':
-            print(f'\nI picked {computer} you win!')
+            win(computer)
         else:
-            print(f'\nI picked {computer} as well, it\'s a tie!')
+            tie(computer)
     elif player.lower() == 's':
         if computer == 'rock':
-            print(f'\nI picked {computer} you lose!')
+            lose(computer)
         elif computer == 'paper':
-            print(f'\nI picked {computer} you win!')
+            win(computer)
         else:
-            print(f'\nI picked {computer} as well, it\'s a tie!')
+            tie(computer)
 
     elif player.lower() == 'q':
         print(f'\n')
